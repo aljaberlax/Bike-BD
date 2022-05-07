@@ -40,7 +40,7 @@ const ProductDetails = () => {
             })
             .then(response => {
                 setReload(!reload)
-                window.alert('delivered');
+                window.alert('Delivered Successfull');
             })
     }
 

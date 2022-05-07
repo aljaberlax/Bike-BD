@@ -12,6 +12,7 @@ import Footer from './Shared/Footer/Footer';
 import NotFound from './Components/NotFound/NotFound';
 import AddItems from './Components/AddItems/AddItems';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
+import MyItems from './Components/MyItems/MyItems';
 
 
 function App() {
@@ -24,16 +25,19 @@ function App() {
         <Route path='/manage' element={<RequireAuth>
           <Manage></Manage>
         </RequireAuth>}>
-
         </Route>
         <Route path='/additems' element={<RequireAuth>
           <AddItems></AddItems>
         </RequireAuth>}>
-
         </Route>
         <Route path='/product/:productId' element={
           <RequireAuth>
           <ProductDetails></ProductDetails>
+          </RequireAuth>
+        }></Route>
+        <Route path='/myitems' element={
+          <RequireAuth>
+          <MyItems></MyItems>
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>

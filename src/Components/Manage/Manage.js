@@ -35,7 +35,7 @@ const navigateToAddItem=()=>{
             <div className="row">
                 <h1 className='text-primary text-center mt-5'>manage items</h1>
                 <br />
-                <button onClick={navigateToAddItem}>Add Item</button>
+                <button onClick={navigateToAddItem}>Add New Item</button>
                 <div className="products-container">
                     {
                         products.map(product => <div key={product._id} >
