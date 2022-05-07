@@ -32,7 +32,7 @@ const navigateToAddItem=()=>{
 }
     return (
         <div id="services" className='container'>
-            <div className="row">
+            <div className="">
                 <h1 className='text-primary text-center mt-5'>manage items</h1>
                 <br />
                 <button onClick={navigateToAddItem}>Add New Item</button>

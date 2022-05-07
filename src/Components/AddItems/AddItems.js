@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import './AddItem.css'
 
 const AddItems = () => {
 
@@ -22,7 +23,7 @@ const AddItems = () => {
         } )
     };
     return (
-        <div className='w-50 mx-auto'>
+        <div className='w-50 mx-auto additem'>
         <h2>Add Item</h2>
         <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
             
