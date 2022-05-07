@@ -9,18 +9,18 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-sm-12 col-md-6">
                             <h6>About</h6>
-                            <p className="text-justify">Scanfcode.com <i>CODE WANTS TO BE SIMPLE </i> is an initiative  to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL and Algorithm.</p>
+                            <p className="text-justify">BikeBD.com is #1 motorcycle oriented website in Bangladesh</p>
                         </div>
 
                         <div className="col-xs-6 col-md-3">
                             <h6>Categories</h6>
                             <ul className="footer-links">
-                                <li><a href="http://scanfcode.com/category/c-language/">weeding photography</a></li>
-                                <li><a href="http://scanfcode.com/category/front-end-development/">candid photography</a></li>
-                                <li><a href="http://scanfcode.com/category/back-end-development/">birthday photography</a></li>
-                                <li><a href="http://scanfcode.com/category/java-programming-language/">yellow tuch photography</a></li>
-                                <li><a href="http://scanfcode.com/category/android/">wild life photography</a></li>
-                                <li><a href="http://scanfcode.com/category/templates/">meeting photography</a></li>
+                                <li><a href="http://scanfcode.com/category/c-language/"> Commuter Bike</a></li>
+                                <li><a href="http://scanfcode.com/category/front-end-development/"> Sports Bike</a></li>
+                                <li><a href="http://scanfcode.com/category/back-end-development/">Scooter bike </a></li>
+                                <li><a href="http://scanfcode.com/category/java-programming-language/">Nacked Sports Bike</a></li>
+                                <li><a href="http://scanfcode.com/category/android/">Cruser Bike</a></li>
+                                <li><a href="http://scanfcode.com/category/templates/">Super Bike</a></li>
                             </ul>
                         </div>
 

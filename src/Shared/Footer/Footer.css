@@ -6,6 +6,11 @@
   line-height:24px;
   color:#737373;
 }
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
 .site-footer hr
 {
   border-top-color:#bbb;
