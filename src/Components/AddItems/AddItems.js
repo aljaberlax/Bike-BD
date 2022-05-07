@@ -18,6 +18,7 @@ const AddItems = () => {
         .then(res=> res.json())
         .then(result =>{
             console.log(result);
+            window.alert('data added successfully')
         } )
     };
     return (

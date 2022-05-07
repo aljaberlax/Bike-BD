@@ -1,25 +1,51 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import UseProduct from '../../Hooks/UseProduct';
 import Product from '../Product/Product';
 
 const Manage = () => {
-    const [products, setProducts] = UseProduct();
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/product')
+            .then(res => res.json())
+            .then(data => setProducts(data));
+    }, [])
+
+    const handleDelete = id => {
+        const proceed = window.confirm('want to delete?')
+        if (proceed) {
+            const url = `http://localhost:5000/product/${id}`
+            fetch(url, {
+                method: 'DELETE'
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    const remaining = products.filter(product => product._id !== id)
+                    setProducts(remaining)
+                })
+        }
+    }
 
     return (
         <div id="services" className='container'>
-        <div className="row">
-        <h1 className='text-primary text-center mt-5'>manage items</h1>
-        <div className="products-container">
-        {
-            products.map(product => <Product
-                key={product._id}
-                product={product}
-            >
-            </Product>)
-        }
+            <div className="row">
+                <h1 className='text-primary text-center mt-5'>manage items</h1>
+                <div className="products-container">
+                    {
+                        products.map(product => <div key={product._id} >
+                            <h1>{product.name}</h1>
+
+                            <p>Seller: {product.seller}</p>
+                            <img style={{ width: '200px' }} src={product.img} alt="" />
+                            <h2>Price: {product.price}</h2>
+                            <p>{product.description}</p>
+                            <button onClick={() => handleDelete(product._id)}>delete</button>
+
+                        </div>)
+                    }
+                </div>
+            </div>
         </div>
-        </div>
-    </div>
     );
 };
 
