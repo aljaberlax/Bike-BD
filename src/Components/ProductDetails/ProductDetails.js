@@ -34,7 +34,7 @@ const ProductDetails = () => {
     const handleDeliver = () => {
 
         const quantity = parseInt(product.quantity) - 1;
-        axios.put(`http://localhost:5000/product/${productId}`,
+        axios.put(`https://powerful-journey-89859.herokuapp.com/product/${productId}`,
             {
                 quantity
             })

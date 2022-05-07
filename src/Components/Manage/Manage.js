@@ -7,7 +7,7 @@ const Manage = () => {
     const [products, setProducts] = useState([]);
     const navigate=useNavigate();
     useEffect(() => {
-        fetch('http://localhost:5000/product')
+        fetch('https://powerful-journey-89859.herokuapp.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -15,7 +15,7 @@ const Manage = () => {
     const handleDelete = id => {
         const proceed = window.confirm('want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/product/${id}`
+            const url = `https://powerful-journey-89859.herokuapp.com/product/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
