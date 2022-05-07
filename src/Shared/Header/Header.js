@@ -15,14 +15,23 @@ const Header = () => {
         <div className='header'>
             <nav>
                 <Link to="/home">Home</Link>
-                <Link to="/"> Manage </Link>
+
                 <Link to="/blog">Blogs</Link>
+                {
+                    user && <>
+                        <Link to="/manage"> Manage Items </Link>
+                        <Link to="/additems"> Add Item </Link>
+                        <Link to="/myitems"> My Items </Link>
+
+                    </>
+                }
                 {
                     user ?
                         <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>Log out</button>
                         :
                         <Link as={Link} to="login"> Login </Link>
                 }
+
             </nav>
 
         </div>

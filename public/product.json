@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Lifan KPR 150 V2",
+        "seller": "Alif motors",
+        "description": "The Lifan KPR 150 V2 comes with a completely new design and new color schemes. The headlight is an LED projection light. The light from the headlight is enough to ride in the night. The taillight and the indicators are also LED. The design of the lights is very much similar to the previous version.",
+        "price": 185000,
+        "stock": 27,
+        "img": "https://i.ibb.co/QnTVZ9S/1619588863-12-488611.jpg",
+        "quantity": 0    
+      },
+    {
+        "name": "Lifan KPR 165R",
+        "seller": "alif motor",
+        "description": "KPR 165 powered by 165 cc which generates Maximum power 16.8 Bhp @ 8000rpm and its maximum torque is 16.8 NM @ 6500 RPM. Lifan KPR 165R Carburetor mileage is 45 KM per Liter (approx).",
+        "price": 199000,
+        "stock": 20,
+        "img": "https://i.ibb.co/5TqyBGP/1619589006-12-326560.jpg",
+        "quantity": 0
+      },
+    {
+        "name": "New Honda CBR 150R",
+        "seller": "rampura motors",
+        "description": "Honda CBR 150R 2021 Indonesia can be considered as the most hyped sports bike of 2021. The bike’s announcement took the biking community by storm. People had been waiting anxiously for the bike. As soon as the news came out that the bike has reached Bangladeshi soil, people went bonkers. Honda CBR 150R being one of the top competitors of the sports bike segment and a serious threat to the Yamaha R15 V3 has out done itself.",
+        "price": 550000,
+        "stock": 10,
+        "img": "https://i.ibb.co/BLQDhbc/honda-cbr150r-indonesian-version-black-red60d836f8b28a7.webp",
+        "quantity": 0
+      },
+    {
+        "name": "Honda CBR150R Indonesian Version",
+        "seller": "jaber motors",
+        "description": "The Indonesian HONDA CBR 150R is the fans favorite offering from Bangladesh Honda Private Limited. This bike features a 150 cc segment engine and an aggressive approach to its Super Sports styling. With its attractive styling, it snatches the attention of people. You can find the latest Honda CBR Price In Bangladesh here.",
+        "price": 450000,
+        "stock": 25,
+        "img": "https://i.ibb.co/VvnbJBQ/new-honda-cbr-150r-black-red60d8585793885.webp",
+        "quantity": 0
+      },
+    {
+        "name": "Suzuki GSX-R150",
+        "seller": "jaber motors",
+        "description": "Suzuki GSX-R150. A name to be reckoned with. This bike is considered one of the fastest bikes in Bangladesh. The bike came to Bangladesh directly as one of the top contenders in the sports bike segment. This is one of the fastest bikes available in Bangladesh. ",
+        "price": 350000,
+        "stock": 20,
+        "img": "https://i.ibb.co/7YWgsYg/suzuki-gsx-r150-black60d70ae4aaeb7.webp",
+        "quantity": 0
+      },
+    {
+        "name": "Yamaha R15 V3 Indian Version Dual ABS",
+        "seller": "rampura motors",
+        "description": "YAMAHA has recently updated their R15 bike once again from top to bottom. The 150cc segment bike has its own league in the market with, we can say a cult following. The bike is now in its third avatar and called the YAMAHA YZF R15 Version 3.0. See pictures of Yamaha R15 v3 here.",
+        "price": 450000,
+        "stock": 100,
+        "img": "https://i.ibb.co/D57FV73/yamaha-r15-v3-indian-version-dual-abs-matte-red60d700461568b.webp",
+        "quantity": 0
+      }
+    
+]
