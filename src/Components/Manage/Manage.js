@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import UseProduct from '../../Hooks/UseProduct';
 import Product from '../Product/Product';
 
 const Manage = () => {
     const [products, setProducts] = useState([]);
+    const navigate=useNavigate();
     useEffect(() => {
         fetch('http://localhost:5000/product')
             .then(res => res.json())
@@ -25,11 +27,15 @@ const Manage = () => {
                 })
         }
     }
-
+const navigateToAddItem=()=>{
+  navigate('/additems')
+}
     return (
         <div id="services" className='container'>
             <div className="row">
                 <h1 className='text-primary text-center mt-5'>manage items</h1>
+                <br />
+                <button onClick={navigateToAddItem}>Add Item</button>
                 <div className="products-container">
                     {
                         products.map(product => <div key={product._id} >

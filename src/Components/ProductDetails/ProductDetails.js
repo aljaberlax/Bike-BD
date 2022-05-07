@@ -15,6 +15,7 @@ const ProductDetails = () => {
 
     }, [productId, reload]);
     console.log(product)
+
     const handleUpdateQuantity = event => {
         event.preventDefault();
         const quantity = event.target.quantity.value;
