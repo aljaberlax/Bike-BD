@@ -13,6 +13,7 @@ import NotFound from './Components/NotFound/NotFound';
 import AddItems from './Components/AddItems/AddItems';
 import ProductDetails from './Components/ProductDetails/ProductDetails';
 import MyItems from './Components/MyItems/MyItems';
+import FindSeller from './Components/FindSeller/FindSeller';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path='/home' element={<Home></Home>}></Route>
+
         <Route path='/manage' element={<RequireAuth>
           <Manage></Manage>
         </RequireAuth>}>
@@ -41,6 +43,8 @@ function App() {
           </RequireAuth>
         }></Route>
         <Route path='/blog' element={<Blogs></Blogs>}></Route>
+        <Route path='/findseller' element={<FindSeller></FindSeller>}></Route>
+
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>

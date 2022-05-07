@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css'
 const Footer = () => {
     return (
-        <div>
+        <div className='footer'>
 
             <footer className="site-footer">
                 <div className="container">
@@ -41,7 +41,7 @@ const Footer = () => {
                     <div className="row">
                         <div className="col-md-8 col-sm-6 col-xs-12">
                             <p className="copyright-text">Copyright &copy; 2017 All Rights Reserved by
-                                <a href="#"> jaber's photography</a>.
+                                <a href="#"> Bike-BD</a>.
                             </p>
                         </div>
 

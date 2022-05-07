@@ -1,6 +1,6 @@
 import { async } from '@firebase/util';
 import React, { useEffect, useState } from 'react';
-
+import './MyItem.css'
 const MyItems = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
@@ -11,7 +11,7 @@ const MyItems = () => {
 
     }, [])
     return (
-        <div>
+        <div className='my-item'>
             <h1>my items</h1>
         </div>
     );
