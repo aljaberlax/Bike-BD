@@ -1,11 +1,12 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import './ProductDetails.css'
 
 const ProductDetails = () => {
     const { productId } = useParams();
     const [product, SetProduct] = useState([])
-    const [quantity, setQuantity] = useState({});
     const [reload, setReload] = useState(false)
     useEffect(() => {
         const url = `http://localhost:5000/product/${productId}`;
@@ -14,28 +15,32 @@ const ProductDetails = () => {
             .then(data => SetProduct(data));
 
     }, [productId, reload]);
-    console.log(product)
 
-    const handleUpdateQuantity = event => {
+
+    const handleUpdateQuantity = async event => {
         event.preventDefault();
-        const quantity = event.target.quantity.value;
-        console.log(quantity)
-        // const updateQuantity = {quantity};
-
-        // send data to the server
-        const url = `http://localhost:5000/product/${productId}`;
-        fetch(url, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(quantity)
-        })
-            .then(res => res.json())
-            .then(data => {
+        const newQuantity = event.target.quantity.value;
+        const quantity = parseInt(product.quantity) + parseInt(newQuantity)
+        await axios.put(`http://localhost:5000/product/${productId}`,
+            {
+                quantity
+            })
+            .then(response => {
                 setReload(!reload)
-                alert('updated successfully!!!');
-                event.target.reset();
+                console.log(response);
+            })
+
+    }
+    const handleDeliver = () => {
+
+        const quantity = parseInt(product.quantity) - 1;
+        axios.put(`http://localhost:5000/product/${productId}`,
+            {
+                quantity
+            })
+            .then(response => {
+                setReload(!reload)
+                window.alert('delivered');
             })
     }
 
@@ -50,12 +55,8 @@ const ProductDetails = () => {
                 <input type="number" name="quantity" placeholder='Update quantity' id="" />
                 <button>Update </button>
             </form>
-            <div className='text-center'>
-                <button className='btn btn-primary'>Deliver</button>
-                <Link to={`/checkout/${productId}`}>
-
-                </Link>
-            </div>
+            <button onClick={handleDeliver}>Deliver </button>
+            <ToastContainer></ToastContainer>
         </div>
     );
 };
