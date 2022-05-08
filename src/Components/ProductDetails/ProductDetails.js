@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [product, SetProduct] = useState([])
     const [reload, setReload] = useState(false)
     useEffect(() => {
-        const url = `http://localhost:5000/product/${productId}`;
+        const url = `https://powerful-journey-89859.herokuapp.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => SetProduct(data));
@@ -21,7 +21,7 @@ const ProductDetails = () => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const quantity = parseInt(product.quantity) + parseInt(newQuantity)
-        await axios.put(`http://localhost:5000/product/${productId}`,
+        await axios.put(`https://powerful-journey-89859.herokuapp.com/product/${productId}`,
             {
                 quantity
             })
