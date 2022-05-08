@@ -33,9 +33,9 @@ const navigateToAddItem=()=>{
     return (
         <div id="services" className='container'>
             <div className="">
-                <h1 className='text-primary text-center mt-5'>manage items</h1>
+                <h1 className=' text-center mt-5'>Manage items</h1>
                 <br />
-                <button onClick={navigateToAddItem}>Add New Item</button>
+                <button className='btn btn-primary' onClick={navigateToAddItem}>Add New Item</button>
                 <div className="products-container">
                     {
                         products.map(product => <div key={product._id} >
@@ -45,7 +45,7 @@ const navigateToAddItem=()=>{
                             <img style={{ width: '200px' }} src={product.img} alt="" />
                             <h2>Price: {product.price}</h2>
                             <p>{product.description}</p>
-                            <button onClick={() => handleDelete(product._id)}>delete</button>
+                            <button className='btn btn-primary' onClick={() => handleDelete(product._id)}>delete</button>
 
                         </div>)
                     }
