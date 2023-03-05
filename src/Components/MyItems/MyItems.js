@@ -5,7 +5,7 @@ import './MyItem.css'
 const MyItems = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
-        fetch('https://powerful-journey-89859.herokuapp.com/product')
+        fetch('https://bike-bd-server.onrender.com/product')
             .then(res => res.json())
             .then(data => setProducts(data));
     }, [])
@@ -13,7 +13,7 @@ const MyItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('want to delete?')
         if (proceed) {
-            const url = `https://powerful-journey-89859.herokuapp.com/product/${id}`
+            const url = `https://bike-bd-server.onrender.com/product/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

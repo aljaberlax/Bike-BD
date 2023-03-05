@@ -6,7 +6,7 @@ const Products = () => {
     const [products, setProducts] = useState([]);
 
     useEffect( ()=>{
-        fetch('https://powerful-journey-89859.herokuapp.com/product')
+        fetch('https://bike-bd-server.onrender.com/product')
         .then(res => res.json())
         .then(data => setProducts(data));
     }, [])

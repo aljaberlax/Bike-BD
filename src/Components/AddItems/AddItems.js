@@ -8,7 +8,7 @@ const AddItems = () => {
     
     const onSubmit = data => {
         console.log(data);
-        const url = `https://powerful-journey-89859.herokuapp.com/product`;
+        const url = `https://bike-bd-server.onrender.com/product`;
         fetch(url, {
             method: 'POST',
             headers: {

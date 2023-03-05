@@ -9,7 +9,7 @@ const ProductDetails = () => {
     const [product, SetProduct] = useState([])
     const [reload, setReload] = useState(false)
     useEffect(() => {
-        const url = `https://powerful-journey-89859.herokuapp.com/product/${productId}`;
+        const url = `https://bike-bd-server.onrender.com/product/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => SetProduct(data));
@@ -21,7 +21,7 @@ const ProductDetails = () => {
         event.preventDefault();
         const newQuantity = event.target.quantity.value;
         const quantity = parseInt(product.quantity) + parseInt(newQuantity)
-        await axios.put(`https://powerful-journey-89859.herokuapp.com/product/${productId}`,
+        await axios.put(`https://bike-bd-server.onrender.com/product/${productId}`,
             {
                 quantity
             })
@@ -34,7 +34,7 @@ const ProductDetails = () => {
     const handleDeliver = () => {
 
         const quantity = parseInt(product.quantity) - 1;
-        axios.put(`https://powerful-journey-89859.herokuapp.com/product/${productId}`,
+        axios.put(`https://bike-bd-server.onrender.com/product/${productId}`,
             {
                 quantity
             })
@@ -43,12 +43,12 @@ const ProductDetails = () => {
                 window.alert('Delivered Successfull');
             })
     }
-
+console.log(product)
     return (
         <div className='product-details'>
             <h2>Selected Product : {product.name}</h2>
             <br />
-            <h2> Quantity : {product.quantity}</h2>
+            <h2> Quantity : {product?.quantity}</h2>
             <img style={{ height: '200px' }} src={product.img} alt="" />
             <br />
             <form onSubmit={handleUpdateQuantity} >
